@@ -4,6 +4,21 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #363636;
+  opacity: 0;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #021e2e;
+  border-radius: 10px;
+  border: 2px solid #363636;
+}
+
 :root {
   font-size: 62.5%;
 }
@@ -11,12 +26,14 @@
 body {
   font-size: 1.6rem;
   font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
 }
 
 header {
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.5) 100%);
   padding: 1.1rem 4rem;
-
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -30,6 +47,8 @@ nav {
 nav .logo {
   width: 8rem;
   height: 5rem;
+
+  cursor: pointer;
 }
 
 nav ul {
@@ -68,4 +87,56 @@ header .user {
   color: #FFFFFF;
 
   cursor: pointer;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+
+  opacity: 50%;
+}
+
+.library {
+  margin-top: 40rem;
+  padding: 0 4rem;
+}
+
+.library h1 {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+
+  color: #FFFFFF;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4.5rem;
+  margin-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.card {
+  box-shadow: 0px 0px 4.58163px 4.58163px rgba(0, 0, 0, 0.3);
+  border-radius: .4rem;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  outline: .5rem solid #fff;
+  scale: 1.1;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  border-radius: .4rem;
 }
