@@ -142,13 +142,13 @@ section {
   border-radius: .4rem;
 }
 
-@media (980px <= width) {
+@media (min-width: 980px) {
   .mobile {
     display: none;
   }
 }
 
-@media (width <= 980px) {
+@media (max-width: 980px) {
 
   nav ul {
     gap: 3rem;
@@ -213,7 +213,7 @@ section {
   }
 }
 
-@media (width <= 540px) {
+@media (max-width: 540px) {
   #series, #movies, #originals {
     display: none;
   }
