@@ -150,12 +150,21 @@ section {
 
 @media (width <= 980px) {
 
+  nav ul {
+    gap: 3rem;
+  }
+
   nav ul li a {
     transform: scale(1.5);
   }
 
   nav ul li a p {
     display: none;
+  }
+
+  .user {
+    position: absolute;
+    right: 4rem;
   }
 
   .user-name {
@@ -201,5 +210,11 @@ section {
   .mobile {
     margin-top: 4rem;
     margin-bottom: 8rem;
+  }
+}
+
+@media (width <= 540px) {
+  #series, #movies, #originals {
+    display: none;
   }
 }
